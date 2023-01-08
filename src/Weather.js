@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import "./App.css";
 import axios from "axios";
@@ -48,12 +48,6 @@ export default function Weather() {
             </div>
           </div>
         </div>
-        <span class="sourcecode">
-          <a href="https://github.com/AnnaVans/first-project">
-            Open-source code
-          </a>
-          by Anna Vans
-        </span>
       </div>
     </div>
   );

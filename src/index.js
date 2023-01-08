@@ -6,12 +6,17 @@ import "./App.css";
 import Weather from "./Weather";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
     <div className="Weather">
       <Weather />
+      <span class="sourcecode">
+        <a href="https://github.com/AnnaVans/first-project">Open-source code</a>
+        by Anna Vans
+      </span>
     </div>
   </StrictMode>
 );
