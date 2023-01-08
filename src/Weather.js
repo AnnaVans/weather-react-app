@@ -13,6 +13,13 @@ export default function Weather() {
     wind: "5",
     humidity: "81",
   };
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4f6484d9a7c6987f3133d7c6fd4bd3b8`;
+    axios.get(url).then(showTemp);
+  }
+
   return (
     <div className="Weather">
       <h1>{weatherData.city}</h1>
@@ -33,7 +40,7 @@ export default function Weather() {
           <div className="container">
             <div className="row">
               <div className="offset-sm-1 col-sm-10">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div class="mb-3 location">
                     <label for="exampleInputEmail1" class="form-label"></label>
                     <input
