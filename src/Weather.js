@@ -25,49 +25,55 @@ export default function Weather() {
       />
     );
 
-    return (
-      <div className="Weather">
-        <h1>{city}</h1>
-        <h2>
-          <span className="actualTemp">
-            {Math.round(response.data.main.temp)}
-          </span>
-          <span className="celsius">°C</span>
-        </h2>
-        <h3>
-          <span class="time"> </span>|
-          <span class="description"> {response.data.weather[0].main}</span>
-          <div>
-            Feels-like temperature °C | Wind speed{" "}
-            {Math.round(response.data.wind.speed)}m/s | Humidity{" "}
-            {response.data.main.humidity} %
-          </div>
-        </h3>
-        <div>
-          <div className="Weather">
-            <div className="container">
-              <div className="row">
-                <div className="offset-sm-1 col-sm-10">
-                  <form onSubmit={handleSubmit}>
-                    <div class="mb-3 location">
-                      <label
-                        for="exampleInputEmail1"
-                        class="form-label"
-                      ></label>
-                      <input
-                        type="text"
-                        placeholder="Enter location"
-                        class="form-control"
-                        autoComplete="off"
-                      />
-                    </div>
-                  </form>
-                </div>
+    let form = (
+      <div>
+        <div className="Weather">
+          <div className="container">
+            <div className="row">
+              <div className="offset-sm-1 col-sm-10">
+                <form onSubmit={handleSubmit}>
+                  <div class="mb-3 location">
+                    <label for="exampleInputEmail1" class="form-label"></label>
+                    <input
+                      type="text"
+                      placeholder="Enter location"
+                      class="form-control"
+                      autoComplete="off"
+                      onChange={updateCity}
+                    />
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     );
+
+    if (loading) {
+      return (
+        <div className="Weather">
+          <h1>{city}</h1>
+          <h2>
+            <span className="actualTemp">
+              {Math.round(response.data.main.temp)}
+            </span>
+            <span className="celsius">°C</span>
+          </h2>
+          <h3>
+            <span class="time"> </span>|
+            <span class="description"> {response.data.weather[0].main}</span>
+            <div>
+              Feels-like temperature °C | Wind speed{" "}
+              {Math.round(response.data.wind.speed)}m/s | Humidity{" "}
+              {response.data.main.humidity} % | {icon}
+            </div>
+          </h3>
+          <div>{form}</div>
+        </div>
+      );
+    } else {
+      return form;
+    }
   }
 }
