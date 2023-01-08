@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
 import "./index.css";
-import App from "./App";
+import "./App.css";
 import Weather from "./Weather";
 import reportWebVitals from "./reportWebVitals";
+import axios from "axios";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
