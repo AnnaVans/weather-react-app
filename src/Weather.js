@@ -14,6 +14,21 @@ export default function Weather() {
     humidity: "81",
   };
 
+  function showTemp(response) {
+    setLoading(true);
+    let icon = (
+      <img
+        alt="weathericon"
+        src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
+      />
+    );
+    showTemperature(Math.round(response.data.main.temp));
+    showWind(Math.round(response.data.wind.speed));
+    showHumidity(response.data.main.humidity);
+    showDescription(response.data.weather[0].main);
+    showIcon(icon);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4f6484d9a7c6987f3133d7c6fd4bd3b8`;
