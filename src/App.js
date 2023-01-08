@@ -3,14 +3,7 @@ import "./App.css";
 import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello friends</h1>
-      </header>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
