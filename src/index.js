@@ -13,7 +13,7 @@ root.render(
   <StrictMode>
     <div className="Weather">
       <Weather />
-      <span class="sourcecode">
+      <span className="sourcecode">
         <a href="https://github.com/AnnaVans/first-project">Open-source code</a>
         by Anna Vans
       </span>
