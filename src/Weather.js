@@ -91,7 +91,7 @@ export default function Weather() {
           <span className="celsius">°C</span>
         </h2>
         <h3>
-          <span className="time"> </span>|
+          <span className="time"> </span>
           <span className="description"> {description}</span>
           <div>
             Feels-like temperature °C | Wind speed {wind}m/s | Humidity{" "}
