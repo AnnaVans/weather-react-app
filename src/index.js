@@ -5,7 +5,6 @@ import "./index.css";
 import "./App.css";
 import Weather from "./Weather";
 import reportWebVitals from "./reportWebVitals";
-
 import "bootstrap/dist/css/bootstrap.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -14,7 +13,9 @@ root.render(
     <div className="Weather">
       <Weather />
       <span className="sourcecode">
-        <a href="https://github.com/AnnaVans/first-project">Open-source code</a>
+        <a href="https://github.com/AnnaVans/weather-react-app">
+          Open-source code
+        </a>
         by Anna Vans
       </span>
     </div>
