@@ -87,15 +87,15 @@ export default function Weather() {
       <div className="Weather">
         <h1>Bratislava</h1>
         <h2>
-          <span className="actualTemp">{temperature}</span>
+          <span className="actualTemp">3</span>
           <span className="celsius">°C</span>
         </h2>
         <h3>
           <span className="time"> </span>
-          <span className="description"> {description}</span>
+          <span className="description"> Rain</span>
           <div>
-            Feels-like temperature °C | Wind speed {wind}m/s | Humidity{" "}
-            {humidity} % | <span> {icon}</span>
+            Feels-like temperature 1 °C | Wind speed 3 m/s | Humidity 81 % |{" "}
+            <span> {icon}</span>
           </div>
         </h3>
         <div>{form}</div>
